@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://cwml3f4m0ue3h"]
+
+[ext_resource type="Script" path="res://scenes/enemy_1.gd" id="1_73sgh"]
+[ext_resource type="Texture2D" uid="uid://c7myf6vuugich" path="res://sprites/zombie.png" id="1_ld76l"]
+[ext_resource type="AudioStream" uid="uid://8kjb37amvcu1" path="res://sounds/zombieall.mp3" id="2_08d30"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wj7rl"]
+radius = 7.0
+height = 48.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_auxyc"]
+radius = 172.676
+
+[node name="enemy1" type="Area2D"]
+script = ExtResource("1_73sgh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+top_level = true
+position = Vector2(-1, 7)
+shape = SubResource("CapsuleShape2D_wj7rl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 3
+texture = ExtResource("1_ld76l")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_08d30")
+pitch_scale = 0.49
+autoplay = true
+max_distance = 500.0
+
+[node name="zombieField" type="Area2D" parent="."]
+disable_mode = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zombieField"]
+shape = SubResource("CircleShape2D_auxyc")
+debug_color = Color(0.835294, 0.368627, 0.32549, 0.419608)
+
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]
+[connection signal="body_entered" from="zombieField" to="." method="_on_zombie_field_body_entered"]

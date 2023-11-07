@@ -1,0 +1,12 @@
+{
+	"palito": {
+		"name": "Palito",
+		"icon": "stick.png",
+		"stackable": false
+	},
+	"piedra": {
+		"name": "Piedra",
+		"icon": "rock.png",
+		"stackable": false
+	}
+}

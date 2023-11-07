@@ -1,0 +1,92 @@
+[gd_scene load_steps=4 format=3 uid="uid://efvjmrfi78ls"]
+
+[ext_resource type="Script" path="res://scenes/inventory.gd" id="1_hocl6"]
+[ext_resource type="PackedScene" uid="uid://dtd5upy6rtg1f" path="res://scenes/slot.tscn" id="1_ipgu3"]
+[ext_resource type="Texture2D" uid="uid://cskvm2263lvpn" path="res://sprites/slot.png" id="2_23oyw"]
+
+[node name="inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hocl6")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = -52.0
+offset_right = 88.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 5
+
+[node name="slot" parent="NinePatchRect/GridContainer" instance=ExtResource("1_ipgu3")]
+layout_mode = 2
+
+[node name="slot2" parent="NinePatchRect/GridContainer" instance=ExtResource("1_ipgu3")]
+layout_mode = 2
+
+[node name="slot3" parent="NinePatchRect/GridContainer" instance=ExtResource("1_ipgu3")]
+layout_mode = 2
+
+[node name="slot4" parent="NinePatchRect/GridContainer" instance=ExtResource("1_ipgu3")]
+layout_mode = 2
+
+[node name="slot5" parent="NinePatchRect/GridContainer" instance=ExtResource("1_ipgu3")]
+layout_mode = 2
+
+[node name="slot6" parent="NinePatchRect/GridContainer" instance=ExtResource("1_ipgu3")]
+layout_mode = 2
+
+[node name="slot7" parent="NinePatchRect/GridContainer" instance=ExtResource("1_ipgu3")]
+layout_mode = 2
+
+[node name="slot8" parent="NinePatchRect/GridContainer" instance=ExtResource("1_ipgu3")]
+layout_mode = 2
+
+[node name="slot9" parent="NinePatchRect/GridContainer" instance=ExtResource("1_ipgu3")]
+layout_mode = 2
+
+[node name="slot10" parent="NinePatchRect/GridContainer" instance=ExtResource("1_ipgu3")]
+layout_mode = 2
+
+[node name="slot11" parent="NinePatchRect/GridContainer" instance=ExtResource("1_ipgu3")]
+layout_mode = 2
+
+[node name="slot12" parent="NinePatchRect/GridContainer" instance=ExtResource("1_ipgu3")]
+layout_mode = 2
+
+[node name="slot13" parent="NinePatchRect/GridContainer" instance=ExtResource("1_ipgu3")]
+layout_mode = 2
+
+[node name="slot14" parent="NinePatchRect/GridContainer" instance=ExtResource("1_ipgu3")]
+layout_mode = 2
+
+[node name="slot15" parent="NinePatchRect/GridContainer" instance=ExtResource("1_ipgu3")]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.584314, 0.584314, 0.584314, 1)
+z_index = -1
+texture_filter = 3
+layout_mode = 0
+offset_left = -90.0
+offset_top = -51.0
+offset_right = -50.0
+offset_bottom = -11.0
+scale = Vector2(5.47908, 3.60321)
+texture = ExtResource("2_23oyw")

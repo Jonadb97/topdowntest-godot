@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsb5vy717gpnu"]
+
+[ext_resource type="Texture2D" uid="uid://ctqv8nxmt5i7i" path="res://sprites/bush.png" id="1_u70xw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0hmeg"]
+radius = 5.5
+height = 20.0
+
+[node name="tree" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+top_level = true
+y_sort_enabled = true
+position = Vector2(-4.5, 36)
+shape = SubResource("CapsuleShape2D_0hmeg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+z_as_relative = false
+y_sort_enabled = true
+texture_filter = 3
+position = Vector2(-3, 15)
+texture = ExtResource("1_u70xw")
+region_rect = Rect2(0, 0, 64, 77.4733)

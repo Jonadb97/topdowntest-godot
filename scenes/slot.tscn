@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtd5upy6rtg1f"]
+
+[ext_resource type="Texture2D" uid="uid://cskvm2263lvpn" path="res://sprites/slot.png" id="1_38oy5"]
+
+[node name="slot" type="Panel"]
+custom_minimum_size = Vector2(32, 32)
+offset_right = 32.0
+offset_bottom = 32.0
+scale = Vector2(1, 1.012)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 3
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+texture = ExtResource("1_38oy5")
